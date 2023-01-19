@@ -62,7 +62,7 @@ listFromTuple[1] = 5
 (first,second,*third) = firstTuple
 #print(first, second, third)
 count = firstTuple.count("third")
-print(count)
+#print(count)
 
 """
 Sets
@@ -70,3 +70,10 @@ Sets
 A set is a collection which is unordered, unchangeable*, and unindexed.
 """
 
+mySet = {"toyota", "Suzuki", "Opel", 5, 5.6, True}
+print(mySet)
+
+# Constructor
+
+newSet = set(("one",False, 3))
+print(type(newSet))
