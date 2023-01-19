@@ -1,13 +1,15 @@
 class Boat:
-
-    def __init__(self, length, hit_point, is_alive,) :
+# Question: is there a static like thing in py? I need an auto increment var., how to make a variable immutable
+    def __init__(self, length, id) :
         self.length = length
-        self.hit_point = hit_point
-        self.is_alive = is_alive
+        self.id = id
+        self.hit_point = 0
+        self.is_alive = False
         self.has_played = False
 
 
-    def is_alive(self):
+    def check_if_alive(self):
+        
         if(self.length - self.hit_point <= 0):
             return False
         else:
@@ -18,3 +20,7 @@ class Boat:
 
     def play_boat(self):
         has_played = True
+        is_alive = True
+
+boat = Boat(5,1)
+print(boat.check_if_alive())
